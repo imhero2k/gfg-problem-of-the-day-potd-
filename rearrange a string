@@ -1,0 +1,14 @@
+class Solution:
+    def arrangeString(self, s):
+        k=0
+        l=[i for i in s]
+        l.sort()
+        e=''
+        for i in l:
+            if i.isalpha():
+                e=e+i
+            else:
+                k=k+int(i)
+        if k>0:
+            return e+str(k)
+        return e
